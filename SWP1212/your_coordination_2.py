@@ -1910,11 +1910,10 @@ class Mainwindow(QWidget):
         if self.username_input.text() == '' or iusname.isdigit() == True:
             reply = QMessageBox.question(self, '알림창', '사용자 이름을 바르게 입력하세요.',
                                          QMessageBox.Yes)
-        if self.usercode_input == '':
+        if self.usercode_input.text() == '':
             reply = QMessageBox.question(self, '알림창', '비밀번호를 입력하세요.',
                                          QMessageBox.Yes)
 
-        # (예외)위치 파일에 없는 위치를 입력하면 알림창 뜨게 만들기
         else:
             self.dialog_open()
 
